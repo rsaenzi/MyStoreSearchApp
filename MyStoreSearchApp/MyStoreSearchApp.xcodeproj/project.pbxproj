@@ -16,6 +16,7 @@
 		B1863E531C6E86EF0052343C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1863E521C6E86EF0052343C /* Persistence.swift */; };
 		B1863E551C6E87080052343C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1863E541C6E87080052343C /* libsqlite3.tbd */; };
 		B1863E571C6E871D0052343C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1863E561C6E871D0052343C /* libsqlite3.0.tbd */; };
+		B1C5E9B81C6E9AA800E165F9 /* Database.db in Resources */ = {isa = PBXBuildFile; fileRef = B1C5E9B71C6E9AA800E165F9 /* Database.db */; };
 		BEE0562AC3F56FD93C60C1F3 /* Pods_MyStoreSearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7130B79C5C831919A96030B8 /* Pods_MyStoreSearchApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,12 +29,12 @@
 		B108CC571C6E828500D63E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B108CC5A1C6E828500D63E5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B108CC5C1C6E828500D63E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1178E281C6E89E900E62936 /* Database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Database.db; sourceTree = "<group>"; };
 		B1863E4A1C6E84A30052343C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		B1863E501C6E851E0052343C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		B1863E521C6E86EF0052343C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B1863E541C6E87080052343C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B1863E561C6E871D0052343C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B1C5E9B71C6E9AA800E165F9 /* Database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Database.db; sourceTree = "<group>"; };
 		BC6AF49FEFF1CF8A948BC8C1 /* Pods-MyStoreSearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyStoreSearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyStoreSearchApp/Pods-MyStoreSearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +93,7 @@
 		B1178E271C6E883900E62936 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				B1178E281C6E89E900E62936 /* Database.db */,
+				B1C5E9B71C6E9AA800E165F9 /* Database.db */,
 				B1863E541C6E87080052343C /* libsqlite3.tbd */,
 				B1863E561C6E871D0052343C /* libsqlite3.0.tbd */,
 			);
@@ -205,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C5E9B81C6E9AA800E165F9 /* Database.db in Resources */,
 				B108CC5B1C6E828500D63E5B /* LaunchScreen.storyboard in Resources */,
 				B108CC581C6E828500D63E5B /* Assets.xcassets in Resources */,
 				B108CC561C6E828500D63E5B /* Main.storyboard in Resources */,
