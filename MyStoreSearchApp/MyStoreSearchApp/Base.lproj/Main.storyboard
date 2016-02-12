@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gov-1D-0ES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Store Search-->
+        <scene sceneID="DSe-28-Sqs">
+            <objects>
+                <viewController id="ZcI-D3-J7W" customClass="SearchViewController" customModule="MyStoreSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z30-VR-gFz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Flm-Xf-xiu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KoH-rc-nx1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrk-TR-KGY">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IKc-We-4QP"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="onClickSearch:forEvent:" destination="ZcI-D3-J7W" eventType="touchUpInside" id="d1O-2t-8Au"/>
+                                    <segue destination="Qf7-Rk-j5n" kind="show" id="c8g-vl-CJa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Haq-ol-6mh">
+                                <rect key="frame" x="20" y="114" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vHF-aj-3cf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Haq-ol-6mh" secondAttribute="trailing" constant="20" id="I38-6D-7rA"/>
+                            <constraint firstItem="Haq-ol-6mh" firstAttribute="leading" secondItem="KoH-rc-nx1" secondAttribute="leading" constant="20" id="Y2d-fh-65H"/>
+                            <constraint firstItem="vrk-TR-KGY" firstAttribute="top" secondItem="Haq-ol-6mh" secondAttribute="bottom" constant="40" id="bpI-PK-V2B"/>
+                            <constraint firstItem="Haq-ol-6mh" firstAttribute="top" secondItem="z30-VR-gFz" secondAttribute="bottom" constant="50" id="hqe-M4-bIw"/>
+                            <constraint firstAttribute="trailing" secondItem="vrk-TR-KGY" secondAttribute="trailing" constant="20" id="kdq-3U-MvX"/>
+                            <constraint firstItem="vrk-TR-KGY" firstAttribute="leading" secondItem="KoH-rc-nx1" secondAttribute="leading" constant="20" id="lLB-yW-Gcs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Store Search" id="jcK-vB-6Wc">
+                        <barButtonItem key="backBarButtonItem" title="  " id="nCr-qm-JSz"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textfieldQuery" destination="Haq-ol-6mh" id="F0q-hj-TTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pb0-4z-8la" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191.5" y="-226.5"/>
+        </scene>
+        <!--Search Results-->
+        <scene sceneID="TRt-5R-PBB">
+            <objects>
+                <tableViewController id="Qf7-Rk-j5n" customClass="ResultsViewController" customModule="MyStoreSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MoG-wI-vDj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Ksq-1S-qgA" style="IBUITableViewCellStyleDefault" id="88Y-yc-CcC">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="88Y-yc-CcC" id="XL2-7I-fCj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ksq-1S-qgA">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qf7-Rk-j5n" id="Gc7-T4-1NU"/>
+                            <outlet property="delegate" destination="Qf7-Rk-j5n" id="qfN-j3-bY7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Search Results" id="IfX-ZF-hmf">
+                        <barButtonItem key="backBarButtonItem" title="  " id="xvc-LT-Gbe"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXe-uq-5c4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684.5" y="-226.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Pg-53-f7L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gov-1D-0ES" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gz5-cQ-DxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZcI-D3-J7W" kind="relationship" relationship="rootViewController" id="bMX-dV-SDJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOn-aN-b9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="-226"/>
+        </scene>
+    </scenes>
+</document>
